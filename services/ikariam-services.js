@@ -17,7 +17,5 @@ async function requestMapData() {
 }
 
 module.exports = {
-    fooGet,
-    fooPost,
     requestMapData
 }

@@ -9,11 +9,12 @@ app.use(express.json());
 
 // DO NOT DELETE
 // may need this because of cors in the future
-// app.use((req,res,next)=>{
-//     res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
-//     res.setHeader('Access-Control-Allow-Headers','Content-Type','Authorization');
-//     next(); 
-// })
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin','*');
+    res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+    res.setHeader('Access-Control-Allow-Headers','Content-Type','Authorization');
+    next(); 
+})
 
 app.use(
     express.urlencoded({
