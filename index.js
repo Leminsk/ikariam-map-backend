@@ -7,8 +7,8 @@ const ikariamRouter = require("./routes/ikariam-routes");
 
 app.use(express.json());
 
-// DO NOT DELETE
-// may need this because of cors in the future
+// FIX THIS
+// need this because of cors (localhost)
 app.use((req,res,next)=>{
     res.setHeader('Access-Control-Allow-Origin','*');
     res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
@@ -36,5 +36,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Ikariam Map Backend listening at http://localhost:${port}`);
 });
